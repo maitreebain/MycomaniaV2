@@ -6,6 +6,11 @@ target 'MycomaniaV2' do
   use_frameworks!
 
   # Pods for MycomaniaV2
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Kingfisher'
+
 
   target 'MycomaniaV2Tests' do
     inherit! :search_paths
