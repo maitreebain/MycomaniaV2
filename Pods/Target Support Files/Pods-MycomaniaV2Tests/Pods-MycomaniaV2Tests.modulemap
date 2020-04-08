@@ -1,0 +1,6 @@
+framework module Pods_MycomaniaV2Tests {
+  umbrella header "Pods-MycomaniaV2Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
