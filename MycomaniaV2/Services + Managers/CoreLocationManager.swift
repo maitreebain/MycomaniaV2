@@ -20,10 +20,9 @@ class CoreLocationSession: NSObject {
         
         locationManager.requestAlwaysAuthorization()
         locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.startUpdatingLocation()
     }
-    
-    
-    
     
 }
 
