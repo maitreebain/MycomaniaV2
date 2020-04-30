@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
+    
+    private let locationSession = CoreLocationSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
