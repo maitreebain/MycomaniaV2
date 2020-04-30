@@ -21,7 +21,7 @@
 		80296B72245A733400C952B5 /* AuthSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80296B71245A733400C952B5 /* AuthSession.swift */; };
 		80296B74245A742C00C952B5 /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80296B73245A742C00C952B5 /* CoreLocationManager.swift */; };
 		80296B76245A786100C952B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80296B75245A786100C952B5 /* TabBarViewController.swift */; };
-		802B54D4245B19F900E9D465 /* Google-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802B54D3245B19F900E9D465 /* Google-Info.plist */; };
+		802B54D6245B1A6E00E9D465 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +53,7 @@
 		80296B71245A733400C952B5 /* AuthSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthSession.swift; sourceTree = "<group>"; };
 		80296B73245A742C00C952B5 /* CoreLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
 		80296B75245A786100C952B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		802B54D3245B19F900E9D465 /* Google-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Google-Info.plist"; sourceTree = "<group>"; };
+		802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95B8A25214DCAA99F5687D82 /* Pods-MycomaniaV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MycomaniaV2Tests.release.xcconfig"; path = "Target Support Files/Pods-MycomaniaV2Tests/Pods-MycomaniaV2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C694ED36C0E308D54EF6E33C /* Pods_MycomaniaV2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MycomaniaV2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E711414CAE64E63764587826 /* Pods-MycomaniaV2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MycomaniaV2Tests.debug.xcconfig"; path = "Target Support Files/Pods-MycomaniaV2Tests/Pods-MycomaniaV2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 				8008AEF4243D7F9C003A1479 /* View Controllers */,
 				8008AED4243D7B37003A1479 /* Assets.xcassets */,
 				8008AED9243D7B37003A1479 /* Info.plist */,
-				802B54D3245B19F900E9D465 /* Google-Info.plist */,
+				802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */,
 				80296B70245A72F500C952B5 /* Services + Managers */,
 			);
 			path = MycomaniaV2;
@@ -275,7 +275,7 @@
 			files = (
 				8008AED8243D7B37003A1479 /* LaunchScreen.storyboard in Resources */,
 				8008AED5243D7B37003A1479 /* Assets.xcassets in Resources */,
-				802B54D4245B19F900E9D465 /* Google-Info.plist in Resources */,
+				802B54D6245B1A6E00E9D465 /* GoogleService-Info.plist in Resources */,
 				8008AED3243D7B36003A1479 /* Main.storyboard in Resources */,
 				8008AEF0243D7EAA003A1479 /* LoginView.storyboard in Resources */,
 			);
