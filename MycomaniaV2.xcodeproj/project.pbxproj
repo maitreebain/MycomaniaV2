@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4DD57F9450A14DD3DD0131D4 /* Pods_MycomaniaV2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C694ED36C0E308D54EF6E33C /* Pods_MycomaniaV2Tests.framework */; };
 		7467D9E08BB7B5F215796FDA /* Pods_MycomaniaV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE0949A9E281939CAA431AE /* Pods_MycomaniaV2.framework */; };
+		800429EA245BA87A0097ED4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800429E9245BA87A0097ED4C /* LoginViewController.swift */; };
 		8008AECC243D7B36003A1479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008AECB243D7B36003A1479 /* AppDelegate.swift */; };
 		8008AECE243D7B36003A1479 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008AECD243D7B36003A1479 /* SceneDelegate.swift */; };
 		8008AED0243D7B36003A1479 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008AECF243D7B36003A1479 /* MapViewController.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		2E719D2135475E91B15CAEBC /* Pods-MycomaniaV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MycomaniaV2.debug.xcconfig"; path = "Target Support Files/Pods-MycomaniaV2/Pods-MycomaniaV2.debug.xcconfig"; sourceTree = "<group>"; };
 		4CE0949A9E281939CAA431AE /* Pods_MycomaniaV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MycomaniaV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		800429E9245BA87A0097ED4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8008AEC8243D7B36003A1479 /* MycomaniaV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MycomaniaV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8008AECB243D7B36003A1479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8008AECD243D7B36003A1479 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				80296B75245A786100C952B5 /* TabBarViewController.swift */,
+				800429E9245BA87A0097ED4C /* LoginViewController.swift */,
 				8008AECF243D7B36003A1479 /* MapViewController.swift */,
 			);
 			path = "View Controllers";
@@ -363,6 +366,7 @@
 				8008AECC243D7B36003A1479 /* AppDelegate.swift in Sources */,
 				80296B72245A733400C952B5 /* AuthSession.swift in Sources */,
 				80296B6F245A72EC00C952B5 /* DatabaseService.swift in Sources */,
+				800429EA245BA87A0097ED4C /* LoginViewController.swift in Sources */,
 				80296B76245A786100C952B5 /* TabBarViewController.swift in Sources */,
 				8008AECE243D7B36003A1479 /* SceneDelegate.swift in Sources */,
 				80296B74245A742C00C952B5 /* CoreLocationManager.swift in Sources */,
