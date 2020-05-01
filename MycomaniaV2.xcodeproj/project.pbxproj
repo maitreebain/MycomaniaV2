@@ -23,6 +23,7 @@
 		80296B74245A742C00C952B5 /* CoreLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80296B73245A742C00C952B5 /* CoreLocationManager.swift */; };
 		80296B76245A786100C952B5 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80296B75245A786100C952B5 /* TabBarViewController.swift */; };
 		802B54D6245B1A6E00E9D465 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */; };
+		80AE54E3245BD438005E58B7 /* Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE54E2245BD438005E58B7 /* Designable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		80296B73245A742C00C952B5 /* CoreLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationManager.swift; sourceTree = "<group>"; };
 		80296B75245A786100C952B5 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		80AE54E2245BD438005E58B7 /* Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Designable.swift; sourceTree = "<group>"; };
 		95B8A25214DCAA99F5687D82 /* Pods-MycomaniaV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MycomaniaV2Tests.release.xcconfig"; path = "Target Support Files/Pods-MycomaniaV2Tests/Pods-MycomaniaV2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C694ED36C0E308D54EF6E33C /* Pods_MycomaniaV2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MycomaniaV2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E711414CAE64E63764587826 /* Pods-MycomaniaV2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MycomaniaV2Tests.debug.xcconfig"; path = "Target Support Files/Pods-MycomaniaV2Tests/Pods-MycomaniaV2Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				8008AED9243D7B37003A1479 /* Info.plist */,
 				802B54D5245B1A6E00E9D465 /* GoogleService-Info.plist */,
 				80296B70245A72F500C952B5 /* Services + Managers */,
+				80AE54E2245BD438005E58B7 /* Designable.swift */,
 			);
 			path = MycomaniaV2;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			files = (
 				8008AED0243D7B36003A1479 /* MapViewController.swift in Sources */,
 				8008AECC243D7B36003A1479 /* AppDelegate.swift in Sources */,
+				80AE54E3245BD438005E58B7 /* Designable.swift in Sources */,
 				80296B72245A733400C952B5 /* AuthSession.swift in Sources */,
 				80296B6F245A72EC00C952B5 /* DatabaseService.swift in Sources */,
 				800429EA245BA87A0097ED4C /* LoginViewController.swift in Sources */,
