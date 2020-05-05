@@ -9,11 +9,16 @@
 import UIKit
 import FirebaseAuth
 
+enum accountState {
+    case newUser
+    case existingUser
+}
+
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var emailButton: DesignableTextField!
-    @IBOutlet weak var passwordButton: DesignableTextField!
-        @IBOutlet weak var loginButton: DesignableButton!
+    @IBOutlet weak var emailText: DesignableTextField!
+    @IBOutlet weak var passwordText: DesignableTextField!
+    @IBOutlet weak var loginButton: DesignableButton!
     @IBOutlet weak var signInLabel: UILabel!
     
     override func viewDidLoad() {
@@ -26,6 +31,18 @@ class LoginViewController: UIViewController {
         loginButton.borderColor = #colorLiteral(red: 0.06649553031, green: 0.09702528268, blue: 0.4052153826, alpha: 0.7868418236)
     }
     
+    private func navigateToMap() {
+        let mapView = MapViewController()
+        UIViewController.showViewController(viewController: mapView)
+    }
     
-
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        
+        
+    }
+    
+    private func logInFlow() {
+        
+    }
+    
 }

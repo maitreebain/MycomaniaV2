@@ -61,6 +61,9 @@
                                         <real key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="nv3-os-dVr" eventType="touchUpInside" id="ezv-dO-AQc"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HAy-Y3-5yr">
                                 <rect key="frame" x="60" y="344" width="294" height="108"/>
@@ -175,9 +178,9 @@
                         <viewLayoutGuide key="safeArea" id="GzE-tL-fBg"/>
                     </view>
                     <connections>
-                        <outlet property="emailButton" destination="ZCR-aA-GCg" id="dtG-LF-ekj"/>
+                        <outlet property="emailText" destination="ZCR-aA-GCg" id="dtG-LF-ekj"/>
                         <outlet property="loginButton" destination="egw-YF-UqY" id="Dje-tf-3CW"/>
-                        <outlet property="passwordButton" destination="4dT-cf-GKh" id="V9Y-sD-xbs"/>
+                        <outlet property="passwordText" destination="4dT-cf-GKh" id="V9Y-sD-xbs"/>
                         <outlet property="signInLabel" destination="xGR-Pp-ayA" id="iQC-3p-Zha"/>
                     </connections>
                 </viewController>
