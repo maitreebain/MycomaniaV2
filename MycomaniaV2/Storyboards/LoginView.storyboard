@@ -175,7 +175,9 @@
                         <viewLayoutGuide key="safeArea" id="GzE-tL-fBg"/>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="egw-YF-UqY" id="URV-BL-9jL"/>
+                        <outlet property="emailButton" destination="ZCR-aA-GCg" id="dtG-LF-ekj"/>
+                        <outlet property="loginButton" destination="egw-YF-UqY" id="Dje-tf-3CW"/>
+                        <outlet property="passwordButton" destination="4dT-cf-GKh" id="V9Y-sD-xbs"/>
                         <outlet property="signInLabel" destination="xGR-Pp-ayA" id="iQC-3p-Zha"/>
                     </connections>
                 </viewController>

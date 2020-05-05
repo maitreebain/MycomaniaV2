@@ -13,6 +13,11 @@
 		800081F524611A5900D0F0E1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081F424611A5900D0F0E1 /* MapView.swift */; };
 		800081F724611A9500D0F0E1 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081F624611A9500D0F0E1 /* FeedViewController.swift */; };
 		800081F924611B3500D0F0E1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081F824611B3500D0F0E1 /* ProfileViewController.swift */; };
+		800081FB24611E2200D0F0E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081FA24611E2200D0F0E1 /* DetailViewController.swift */; };
+		800081FD24611E4700D0F0E1 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081FC24611E4700D0F0E1 /* FeedView.swift */; };
+		800081FF24611F7B00D0F0E1 /* CreateShroomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800081FE24611F7B00D0F0E1 /* CreateShroomController.swift */; };
+		8000820124611FA600D0F0E1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000820024611FA600D0F0E1 /* User.swift */; };
+		8000820324611FAC00D0F0E1 /* Shroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8000820224611FAC00D0F0E1 /* Shroom.swift */; };
 		800429EA245BA87A0097ED4C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800429E9245BA87A0097ED4C /* LoginViewController.swift */; };
 		8008AECC243D7B36003A1479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008AECB243D7B36003A1479 /* AppDelegate.swift */; };
 		8008AECE243D7B36003A1479 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8008AECD243D7B36003A1479 /* SceneDelegate.swift */; };
@@ -47,6 +52,11 @@
 		800081F424611A5900D0F0E1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		800081F624611A9500D0F0E1 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		800081F824611B3500D0F0E1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		800081FA24611E2200D0F0E1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		800081FC24611E4700D0F0E1 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		800081FE24611F7B00D0F0E1 /* CreateShroomController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateShroomController.swift; sourceTree = "<group>"; };
+		8000820024611FA600D0F0E1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8000820224611FAC00D0F0E1 /* Shroom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shroom.swift; sourceTree = "<group>"; };
 		800429E9245BA87A0097ED4C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8008AEC8243D7B36003A1479 /* MycomaniaV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MycomaniaV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8008AECB243D7B36003A1479 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				800081F424611A5900D0F0E1 /* MapView.swift */,
+				800081FC24611E4700D0F0E1 /* FeedView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -182,7 +193,9 @@
 				80296B75245A786100C952B5 /* TabBarViewController.swift */,
 				800429E9245BA87A0097ED4C /* LoginViewController.swift */,
 				8008AECF243D7B36003A1479 /* MapViewController.swift */,
+				800081FE24611F7B00D0F0E1 /* CreateShroomController.swift */,
 				800081F624611A9500D0F0E1 /* FeedViewController.swift */,
+				800081FA24611E2200D0F0E1 /* DetailViewController.swift */,
 				800081F824611B3500D0F0E1 /* ProfileViewController.swift */,
 			);
 			path = "View Controllers";
@@ -198,6 +211,8 @@
 		8008AEF6243D7FDC003A1479 /* API Clients + Models */ = {
 			isa = PBXGroup;
 			children = (
+				8000820024611FA600D0F0E1 /* User.swift */,
+				8000820224611FAC00D0F0E1 /* Shroom.swift */,
 			);
 			path = "API Clients + Models";
 			sourceTree = "<group>";
@@ -205,9 +220,9 @@
 		80296B70245A72F500C952B5 /* Services + Managers */ = {
 			isa = PBXGroup;
 			children = (
+				80296B71245A733400C952B5 /* AuthSession.swift */,
 				80296B6E245A72EC00C952B5 /* DatabaseService.swift */,
 				80296B73245A742C00C952B5 /* CoreLocationManager.swift */,
-				80296B71245A733400C952B5 /* AuthSession.swift */,
 			);
 			path = "Services + Managers";
 			sourceTree = "<group>";
@@ -394,18 +409,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				8008AED0243D7B36003A1479 /* MapViewController.swift in Sources */,
+				8000820324611FAC00D0F0E1 /* Shroom.swift in Sources */,
 				8008AECC243D7B36003A1479 /* AppDelegate.swift in Sources */,
 				80AE54E3245BD438005E58B7 /* Designable.swift in Sources */,
 				800081F524611A5900D0F0E1 /* MapView.swift in Sources */,
 				80296B72245A733400C952B5 /* AuthSession.swift in Sources */,
 				80296B6F245A72EC00C952B5 /* DatabaseService.swift in Sources */,
 				800429EA245BA87A0097ED4C /* LoginViewController.swift in Sources */,
+				8000820124611FA600D0F0E1 /* User.swift in Sources */,
+				800081FF24611F7B00D0F0E1 /* CreateShroomController.swift in Sources */,
 				80296B76245A786100C952B5 /* TabBarViewController.swift in Sources */,
 				8008AECE243D7B36003A1479 /* SceneDelegate.swift in Sources */,
 				800081F12461116700D0F0E1 /* ViewController+Extension.swift in Sources */,
+				800081FD24611E4700D0F0E1 /* FeedView.swift in Sources */,
 				800081F924611B3500D0F0E1 /* ProfileViewController.swift in Sources */,
 				800081F724611A9500D0F0E1 /* FeedViewController.swift in Sources */,
 				80296B74245A742C00C952B5 /* CoreLocationManager.swift in Sources */,
+				800081FB24611E2200D0F0E1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
