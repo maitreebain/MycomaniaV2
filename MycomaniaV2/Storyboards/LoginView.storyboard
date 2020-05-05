@@ -21,30 +21,14 @@
                                     <constraint firstAttribute="width" secondItem="fmW-Ru-90X" secondAttribute="height" multiplier="1:1" id="SzJ-J3-yH7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-Pp-ayA">
-                                <rect key="frame" x="60" y="763" width="207" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-Pp-ayA">
+                                <rect key="frame" x="60" y="701" width="186" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-J6-OAw" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
-                                <rect key="frame" x="234" y="757" width="120" height="32"/>
-                                <color key="backgroundColor" red="0.072671605959999996" green="0.096112775220000002" blue="0.38880076139999997" alpha="0.78684182359999999" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="nvB-i2-ulB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
-                                <state key="normal" title="Sign up">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egw-YF-UqY" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
-                                <rect key="frame" x="147" y="532" width="120" height="44"/>
+                                <rect key="frame" x="147" y="492" width="120" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="PrA-Jq-qp7"/>
                                     <constraint firstAttribute="height" constant="44" id="cF5-2N-aW3"/>
@@ -97,7 +81,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tbt-CN-7XK">
-                                <rect key="frame" x="60" y="636" width="294" height="35"/>
+                                <rect key="frame" x="60" y="606" width="294" height="35"/>
                                 <subviews>
                                     <button opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua8-Ou-xox" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="84.5" height="35"/>
@@ -152,28 +136,56 @@
                                 <color key="textColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log in with:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z9C-Hr-9eg">
+                                <rect key="frame" x="60" y="566" width="294" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.072671605959999996" green="0.096112775220000002" blue="0.38880076139999997" alpha="0.78684182359999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-J6-OAw" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                <rect key="frame" x="254" y="691" width="100" height="32"/>
+                                <color key="backgroundColor" red="0.072671605959999996" green="0.096112775220000002" blue="0.38880076139999997" alpha="0.78684182359999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="nvB-i2-ulB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toggleButtonPressed:" destination="nv3-os-dVr" eventType="touchUpInside" id="a0W-q7-z8Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="50q-J6-OAw" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="50" id="1YV-rt-ezS"/>
                             <constraint firstItem="HAy-Y3-5yr" firstAttribute="top" secondItem="fmW-Ru-90X" secondAttribute="bottom" constant="60" id="1bL-aG-y1T"/>
-                            <constraint firstItem="Tbt-CN-7XK" firstAttribute="top" secondItem="egw-YF-UqY" secondAttribute="bottom" constant="60" id="4aJ-ga-ugF"/>
+                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="leading" secondItem="HAy-Y3-5yr" secondAttribute="leading" id="4X5-bh-3Xk"/>
                             <constraint firstItem="Tbt-CN-7XK" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="60" id="5hI-Wg-yfg"/>
                             <constraint firstItem="fmW-Ru-90X" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="20" id="5jg-Nj-3Qn"/>
                             <constraint firstItem="egw-YF-UqY" firstAttribute="centerX" secondItem="HAy-Y3-5yr" secondAttribute="centerX" id="9kC-eO-UfD"/>
                             <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" constant="60" id="BkO-ua-Bog"/>
-                            <constraint firstItem="50q-J6-OAw" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="86" id="HkH-TI-VYJ"/>
+                            <constraint firstItem="z9C-Hr-9eg" firstAttribute="leading" secondItem="HAy-Y3-5yr" secondAttribute="leading" id="Ie4-ZL-nw8"/>
+                            <constraint firstItem="Tbt-CN-7XK" firstAttribute="top" secondItem="z9C-Hr-9eg" secondAttribute="bottom" constant="20" id="Jws-Qr-VzK"/>
                             <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="fmW-Ru-90X" secondAttribute="trailing" constant="204" id="NEF-zQ-nep"/>
-                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="50q-J6-OAw" secondAttribute="trailing" constant="60" id="Onx-Sz-3rS"/>
                             <constraint firstItem="Aaa-dz-Q5g" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="20" id="Sha-2O-PG5"/>
                             <constraint firstItem="fmW-Ru-90X" firstAttribute="top" secondItem="GzE-tL-fBg" secondAttribute="top" constant="50" id="TbC-7c-KEd"/>
+                            <constraint firstItem="50q-J6-OAw" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" id="UBz-1M-Xhk"/>
+                            <constraint firstItem="z9C-Hr-9eg" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" id="UVC-q8-vlv"/>
                             <constraint firstItem="Aaa-dz-Q5g" firstAttribute="top" secondItem="fmW-Ru-90X" secondAttribute="bottom" constant="20" id="UrF-rZ-Cku"/>
-                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="leading" secondItem="Tbt-CN-7XK" secondAttribute="leading" id="XbL-1R-ikA"/>
-                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="92" id="duQ-lY-xlZ"/>
+                            <constraint firstItem="z9C-Hr-9eg" firstAttribute="top" secondItem="egw-YF-UqY" secondAttribute="bottom" constant="30" id="Y3j-5t-eoW"/>
+                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="60" id="YFV-B8-oug"/>
                             <constraint firstItem="Tbt-CN-7XK" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" id="eXg-Ad-9lg"/>
                             <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="Aaa-dz-Q5g" secondAttribute="trailing" constant="20" id="ej6-3L-UPC"/>
-                            <constraint firstItem="egw-YF-UqY" firstAttribute="top" secondItem="HAy-Y3-5yr" secondAttribute="bottom" constant="80" id="q0Z-y5-9NE"/>
+                            <constraint firstItem="50q-J6-OAw" firstAttribute="leading" secondItem="xGR-Pp-ayA" secondAttribute="trailing" constant="8" id="kZ5-v4-M9j"/>
+                            <constraint firstItem="egw-YF-UqY" firstAttribute="top" secondItem="HAy-Y3-5yr" secondAttribute="bottom" constant="40" id="q0Z-y5-9NE"/>
                             <constraint firstItem="HAy-Y3-5yr" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="60" id="rfI-VW-Fwn"/>
-                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="trailing" secondItem="egw-YF-UqY" secondAttribute="trailing" id="sbh-tt-JnV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GzE-tL-fBg"/>
                     </view>

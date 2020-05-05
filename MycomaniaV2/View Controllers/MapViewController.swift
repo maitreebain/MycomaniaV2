@@ -10,10 +10,17 @@ import UIKit
 
 class MapViewController: UIViewController {
     
+    let mapView = MapView()
+    
+    override func loadView() {
+        view = mapView
+    }
+    
     private let locationSession = CoreLocationSession()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
 

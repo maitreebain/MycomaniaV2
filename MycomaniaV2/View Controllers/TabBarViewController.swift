@@ -11,16 +11,27 @@ import UIKit
 class TabBarViewController: UITabBarController {
     
     private lazy var mapViewController: MapViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyboard.instantiateViewController(identifier: "MapViewController") as MapViewController
+        let viewController = MapViewController()
         viewController.tabBarItem = UITabBarItem(title: "Map", image: UIImage(systemName: "mappin.and.ellipse"), tag: 0)
         return viewController
     }()
+    
+    private lazy var feedViewController: FeedViewController = {
+       let viewController = FeedViewController()
+        viewController.tabBarItem = UITabBarItem(title: "Feed", image: UIImage(systemName: "square.grid.4x3.fill"), tag: 1)
+        return viewController
+    }()
+
+    //make prof view controller a storyboard
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [UINavigationController(rootViewController: mapViewController)]
+        viewControllers = [
+            UINavigationController(rootViewController: mapViewController),
+            UINavigationController(rootViewController: feedViewController)
+        ]
     }
 
 

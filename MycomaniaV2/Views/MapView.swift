@@ -7,8 +7,22 @@
 //
 
 import UIKit
+import MapKit
 
 class MapView: UIView {
+    
+    public lazy var citySearch: UISearchBar = {
+        let search = UISearchBar()
+        search.placeholder = "Enter a city"
+        search.layer.cornerRadius = 10
+        search.layer.masksToBounds = true
+        return search
+    }()
+    
+    public lazy var mapView: MKMapView = {
+        let map = MKMapView()
+        return map
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
@@ -21,9 +35,33 @@ class MapView: UIView {
     }
     
     private func commonInit() {
-        
+        setUpMapViewConstraints()
+        setUpCitySearchConstraints()
     }
     
+    private func setUpMapViewConstraints() {
+        addSubview(mapView)
+        
+        mapView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            mapView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            mapView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+        ])
+    }
     
+    private func setUpCitySearchConstraints() {
+        addSubview(citySearch)
+        
+        citySearch.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            citySearch.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
+            citySearch.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            citySearch.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
+        ])
+    }
 
 }
