@@ -20,8 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
         if let _ = Auth.auth().currentUser {
-            let mapVC =  MapViewController()
-            UIViewController.showViewController(viewController: mapVC)
+            let tabController = TabBarViewController()
+            UIViewController.showViewController(viewController: tabController)
         } else {
             UIViewController.showViewController(storyboardName: "LoginView", viewControllerID: "LoginViewController")
             
