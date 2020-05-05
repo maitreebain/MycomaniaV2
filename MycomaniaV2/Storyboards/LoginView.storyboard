@@ -15,27 +15,176 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-04-30 at 10.41.27 PM" translatesAutoresizingMaskIntoConstraints="NO" id="rAv-d2-Nb4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin" translatesAutoresizingMaskIntoConstraints="NO" id="fmW-Ru-90X" customClass="DesignableImageView" customModule="MycomaniaV2" customModuleProvider="target">
+                                <rect key="frame" x="20" y="94" width="190" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fmW-Ru-90X" secondAttribute="height" multiplier="1:1" id="SzJ-J3-yH7"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-Pp-ayA">
+                                <rect key="frame" x="60" y="763" width="207" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50q-J6-OAw" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                <rect key="frame" x="234" y="757" width="120" height="32"/>
+                                <color key="backgroundColor" red="0.072671605959999996" green="0.096112775220000002" blue="0.38880076139999997" alpha="0.78684182359999999" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="nvB-i2-ulB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <state key="normal" title="Sign up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egw-YF-UqY" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                <rect key="frame" x="147" y="532" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="PrA-Jq-qp7"/>
+                                    <constraint firstAttribute="height" constant="44" id="cF5-2N-aW3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="HAy-Y3-5yr">
+                                <rect key="frame" x="60" y="344" width="294" height="108"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter an email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZCR-aA-GCg" customClass="DesignableTextField" customModule="MycomaniaV2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4dT-cf-GKh" customClass="DesignableTextField" customModule="MycomaniaV2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="74" width="294" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Tbt-CN-7XK">
+                                <rect key="frame" x="60" y="636" width="294" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ua8-Ou-xox" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="84.5" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <state key="normal" title="Google">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-D5-p0l" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                        <rect key="frame" x="104.5" y="0.0" width="85" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <state key="normal" title="Facebook">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34t-XQ-YxT" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
+                                        <rect key="frame" x="209.5" y="0.0" width="84.5" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="20"/>
+                                        <state key="normal" title="Twitter">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaa-dz-Q5g">
+                                <rect key="frame" x="20" y="304" width="374" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <color key="textColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rAv-d2-Nb4" firstAttribute="top" secondItem="GzE-tL-fBg" secondAttribute="top" id="Tqs-f6-aXV"/>
-                            <constraint firstItem="rAv-d2-Nb4" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" id="WwL-EP-avn"/>
-                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="rAv-d2-Nb4" secondAttribute="trailing" id="iJN-9Y-U89"/>
-                            <constraint firstItem="GzE-tL-fBg" firstAttribute="bottom" secondItem="rAv-d2-Nb4" secondAttribute="bottom" id="ls9-8h-NIG"/>
+                            <constraint firstItem="HAy-Y3-5yr" firstAttribute="top" secondItem="fmW-Ru-90X" secondAttribute="bottom" constant="60" id="1bL-aG-y1T"/>
+                            <constraint firstItem="Tbt-CN-7XK" firstAttribute="top" secondItem="egw-YF-UqY" secondAttribute="bottom" constant="60" id="4aJ-ga-ugF"/>
+                            <constraint firstItem="Tbt-CN-7XK" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="60" id="5hI-Wg-yfg"/>
+                            <constraint firstItem="fmW-Ru-90X" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="20" id="5jg-Nj-3Qn"/>
+                            <constraint firstItem="egw-YF-UqY" firstAttribute="centerX" secondItem="HAy-Y3-5yr" secondAttribute="centerX" id="9kC-eO-UfD"/>
+                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" constant="60" id="BkO-ua-Bog"/>
+                            <constraint firstItem="50q-J6-OAw" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="86" id="HkH-TI-VYJ"/>
+                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="fmW-Ru-90X" secondAttribute="trailing" constant="204" id="NEF-zQ-nep"/>
+                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="50q-J6-OAw" secondAttribute="trailing" constant="60" id="Onx-Sz-3rS"/>
+                            <constraint firstItem="Aaa-dz-Q5g" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="20" id="Sha-2O-PG5"/>
+                            <constraint firstItem="fmW-Ru-90X" firstAttribute="top" secondItem="GzE-tL-fBg" secondAttribute="top" constant="50" id="TbC-7c-KEd"/>
+                            <constraint firstItem="Aaa-dz-Q5g" firstAttribute="top" secondItem="fmW-Ru-90X" secondAttribute="bottom" constant="20" id="UrF-rZ-Cku"/>
+                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="leading" secondItem="Tbt-CN-7XK" secondAttribute="leading" id="XbL-1R-ikA"/>
+                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="top" secondItem="Tbt-CN-7XK" secondAttribute="bottom" constant="92" id="duQ-lY-xlZ"/>
+                            <constraint firstItem="Tbt-CN-7XK" firstAttribute="trailing" secondItem="HAy-Y3-5yr" secondAttribute="trailing" id="eXg-Ad-9lg"/>
+                            <constraint firstItem="GzE-tL-fBg" firstAttribute="trailing" secondItem="Aaa-dz-Q5g" secondAttribute="trailing" constant="20" id="ej6-3L-UPC"/>
+                            <constraint firstItem="egw-YF-UqY" firstAttribute="top" secondItem="HAy-Y3-5yr" secondAttribute="bottom" constant="80" id="q0Z-y5-9NE"/>
+                            <constraint firstItem="HAy-Y3-5yr" firstAttribute="leading" secondItem="GzE-tL-fBg" secondAttribute="leading" constant="60" id="rfI-VW-Fwn"/>
+                            <constraint firstItem="xGR-Pp-ayA" firstAttribute="trailing" secondItem="egw-YF-UqY" secondAttribute="trailing" id="sbh-tt-JnV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GzE-tL-fBg"/>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="egw-YF-UqY" id="URV-BL-9jL"/>
+                        <outlet property="signInLabel" destination="xGR-Pp-ayA" id="iQC-3p-Zha"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gb-VM-V8O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="343" y="72"/>
+            <point key="canvasLocation" x="340.57971014492756" y="71.651785714285708"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2020-04-30 at 10.41.27 PM" width="1024" height="732"/>
+        <image name="pin" width="1024" height="732"/>
     </resources>
 </document>
