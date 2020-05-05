@@ -7,3 +7,19 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseFirestore
+
+class DatabaseService {
+    
+    static let user = "user"
+    static let shroomItems = "shrooms"
+    
+    private let db = DatabaseService()
+
+    
+    static func createDatabaseUser(completion: @escaping (Result<Bool, Error>) -> ()) {
+        
+    }
+    
+}
