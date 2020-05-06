@@ -66,6 +66,8 @@ class MapViewController: UIViewController {
         annotation.title = "user input title"
         annotation.subtitle = "subtitle"
         map.addAnnotation(annotation)
+        annotations.append(annotation)
+        isShowingNewAnnotations = true
     }
     
 }
@@ -77,6 +79,44 @@ extension MapViewController: MKMapViewDelegate {
         let longTitle: String = String(format: "%.02f", Float((view.annotation?.coordinate.longitude)!))
         
         print(latTitle + longTitle)
+        
+        guard let annotation = view.annotation else { return }
+        
+//        guard let detailVC = storyboard?.instantiateViewController(identifier: "LocationDetailController", creator: { coder in
+//          return LocationDetailController(coder: coder, location: location)
+//        }) else {
+//          fatalError("could not downcast to LocationDetailController")
+//        }
+//        //detailVC.modalPresentationStyle = .overCurrentContext
+//        detailVC.modalTransitionStyle = .crossDissolve
+//        present(detailVC, animated: true)
+    }
+    
+    //
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        guard annotation is MKPointAnnotation else { return nil }
+        
+        let identifier = "annotationView"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKMarkerAnnotationView
+        
+        if annotationView == nil {
+          annotationView = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+          annotationView?.canShowCallout = true
+          //annotationView?.glyphText = "iOS 6.3"
+//          annotationView?.glyphImage = UIImage()
+            // get image from user ?
+        } else {
+          annotationView?.annotation = annotation
+        }
+        return annotationView
+    }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        if isShowingNewAnnotations {
+            mapView.showAnnotations(annotations, animated: true)
+        }
+        isShowingNewAnnotations = false
     }
     
 }
