@@ -8,13 +8,15 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
+import GoogleSignIn
 
 enum AccountState {
     case newUser
     case existingUser
 }
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, GIDSignInDelegate {
 
     @IBOutlet weak var emailText: DesignableTextField!
     @IBOutlet weak var passwordText: DesignableTextField!
@@ -32,6 +34,13 @@ class LoginViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        GIDSignIn.sharedInstance()?.delegate = self
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+    }
+    
     private func introUI() {
         loginButton.borderColor = #colorLiteral(red: 0.06649553031, green: 0.09702528268, blue: 0.4052153826, alpha: 0.7868418236)
     }
@@ -40,6 +49,7 @@ class LoginViewController: UIViewController {
         let mapView = MapViewController()
         UIViewController.showViewController(viewController: mapView)
     }
+    
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
@@ -82,6 +92,49 @@ class LoginViewController: UIViewController {
         }
     }
     
+    private func navToTab() {
+        let tabController = TabBarViewController()
+        UIViewController.showViewController(viewController: tabController)
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+     print("did sign in with google")
+        if let error = error {
+            print("failed to sign in: \(error.localizedDescription)")
+        }
+        
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                           accessToken: authentication.accessToken)
+        Auth.auth().signIn(with: credential) { (authDataResult, error) in
+            
+            if let error = error {
+                print("failed to retrieve data: \(error.localizedDescription)")
+            }
+            
+            guard let authResult = authDataResult else { return }
+            
+            DatabaseService.shared.createDatabaseUser(authDataResult: authResult) { (result) in
+                
+                switch result{
+                case .failure(let error):
+                    print("could not create user with google: \(error.localizedDescription)")
+                case .success:
+                    print("created account with google")
+                    self.dismiss(animated: true)
+                }
+            }
+            self.navToTab()
+        }
+    }
+    
+    
+    @IBAction func googleSignIn(_ sender: UIButton) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    
     @IBAction func toggleButtonPressed(_ sender: UIButton) {
         
         accountState = accountState == .existingUser ? .newUser : .existingUser
@@ -101,3 +154,4 @@ class LoginViewController: UIViewController {
         }
     }
 }
+

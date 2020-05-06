@@ -10,7 +10,7 @@ target 'MycomaniaV2' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Kingfisher'
-
+  pod 'GoogleSignIn'
 
   target 'MycomaniaV2Tests' do
     inherit! :search_paths

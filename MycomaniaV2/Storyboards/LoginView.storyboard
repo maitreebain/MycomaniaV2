@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="120" id="PrA-Jq-qp7"/>
                                     <constraint firstAttribute="height" constant="44" id="cF5-2N-aW3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <state key="normal" title="Log In">
                                     <color key="titleColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -98,6 +98,9 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="googleSignIn:" destination="nv3-os-dVr" eventType="touchUpInside" id="TgU-nK-PWP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-D5-p0l" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
                                         <rect key="frame" x="104.5" y="0.0" width="85" height="35"/>

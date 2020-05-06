@@ -23,6 +23,12 @@ class TabBarViewController: UITabBarController {
     }()
 
     //make prof view controller a storyboard
+    private lazy var profileViewController: ProfileViewController = {
+       let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(identifier: "ProfileViewController") as ProfileViewController
+        viewController.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(systemName: "person.fill"), tag: 2)
+        return viewController
+    }()
 
 
     override func viewDidLoad() {
@@ -30,7 +36,8 @@ class TabBarViewController: UITabBarController {
         
         viewControllers = [
             UINavigationController(rootViewController: mapViewController),
-            UINavigationController(rootViewController: feedViewController)
+            UINavigationController(rootViewController: feedViewController),
+            profileViewController
         ]
     }
 
