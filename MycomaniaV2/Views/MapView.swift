@@ -21,8 +21,12 @@ class MapView: UIView {
     
     public lazy var mapView: MKMapView = {
         let map = MKMapView()
+        map.showsCompass = true
+        map.mapType = .standard
         return map
     }()
+    
+    //switch map types
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)

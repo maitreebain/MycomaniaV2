@@ -22,6 +22,13 @@ class CoreLocationSession: NSObject {
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.startUpdatingLocation()
+        checkLocationEnabled()
+    }
+    
+    private func checkLocationEnabled() {
+        if !CLLocationManager.locationServicesEnabled() {
+            print("location not available")
+        }
     }
     
 }

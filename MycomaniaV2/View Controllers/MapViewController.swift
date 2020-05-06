@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import MapKit
+import CoreLocation
 
 class MapViewController: UIViewController {
     
@@ -17,9 +19,22 @@ class MapViewController: UIViewController {
     }
     
     private let locationSession = CoreLocationSession()
+    
+    private var userTrackingButton: MKUserTrackingButton!
+    
+    private var isShowingNewAnnotations = false
+    
+    private var annotations = [MKPointAnnotation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Search"
+        
+        mapView.mapView.showsUserLocation = true
+        userTrackingButton = MKUserTrackingButton(frame: CGRect(x: 20, y: 30, width: 40, height: 40))
+        mapView.addSubview(userTrackingButton)
+        userTrackingButton.mapView = mapView.mapView
         
     }
 
