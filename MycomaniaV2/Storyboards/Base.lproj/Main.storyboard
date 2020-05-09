@@ -22,14 +22,26 @@
                                     <action selector="signOutButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqE-FE-sAN"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r3w-HS-Pnl">
+                                <rect key="frame" x="20" y="306" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="zHc-Z1-sP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="204" id="Gd3-cv-Ffc"/>
+                            <constraint firstItem="r3w-HS-Pnl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="V0F-0F-Dp9"/>
+                            <constraint firstItem="r3w-HS-Pnl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="262" id="lW0-AO-Qt7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r3w-HS-Pnl" secondAttribute="trailing" constant="20" id="xQQ-iz-TBR"/>
                             <constraint firstItem="zHc-Z1-sP3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="437" id="y6b-GZ-iHd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="r3w-HS-Pnl" id="sxf-jd-lyo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

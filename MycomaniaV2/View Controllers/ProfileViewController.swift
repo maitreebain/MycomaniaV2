@@ -10,13 +10,15 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
+    
+    @IBOutlet weak var emailLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
     
-
     @IBAction func signOutButtonPressed(_ sender: UIButton) {
         print("bdfh")
         do {

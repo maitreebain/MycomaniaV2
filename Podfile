@@ -11,6 +11,7 @@ target 'MycomaniaV2' do
   pod 'Firebase/Storage'
   pod 'Kingfisher'
   pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit'
 
   target 'MycomaniaV2Tests' do
     inherit! :search_paths

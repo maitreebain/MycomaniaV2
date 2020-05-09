@@ -21,7 +21,7 @@
                                     <constraint firstAttribute="width" secondItem="fmW-Ru-90X" secondAttribute="height" multiplier="1:1" id="SzJ-J3-yH7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-Pp-ayA">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xGR-Pp-ayA">
                                 <rect key="frame" x="60" y="701" width="186" height="20"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
                                 <color key="textColor" red="0.78642135859999995" green="0.001845145947" blue="0.1215283498" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -114,6 +114,9 @@
                                                 <real key="value" value="6"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="facebookSignIn:" destination="nv3-os-dVr" eventType="touchUpInside" id="inX-1P-ziT"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" alpha="0.69999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34t-XQ-YxT" customClass="DesignableButton" customModule="MycomaniaV2" customModuleProvider="target">
                                         <rect key="frame" x="209.5" y="0.0" width="84.5" height="35"/>

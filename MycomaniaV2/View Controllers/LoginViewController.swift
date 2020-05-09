@@ -10,6 +10,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import GoogleSignIn
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 enum AccountState {
     case newUser
@@ -103,7 +105,6 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
             print("failed to sign in: \(error.localizedDescription)")
         }
         
-        
         guard let authentication = user.authentication else { return }
         let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
                                                            accessToken: authentication.accessToken)
@@ -132,6 +133,58 @@ class LoginViewController: UIViewController, GIDSignInDelegate {
     
     @IBAction func googleSignIn(_ sender: UIButton) {
         GIDSignIn.sharedInstance()?.signIn()
+    }
+    
+    
+    
+    func fbLogin() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+        loginManager.logIn(permissions:[ .publicProfile, .email, .userFriends ], viewController: self) { loginResult in
+            
+            switch loginResult {
+            
+            case .failed(let error):
+                print(error)
+            
+            case .cancelled:
+                print("User cancelled login process.")
+            
+            case .success( _, _, _):
+                self.getFBUserData()
+            }
+        }
+    }
+    
+    func getFBUserData() {
+        if((AccessToken.current) != nil){
+            
+            GraphRequest(graphPath: "me", parameters: ["fields": "id, name, picture.type(large), email, gender"]).start(completionHandler: { (connection, result, error) -> Void in
+                if (error == nil){
+                    
+                    let dict = result as! [String : AnyObject]
+                    print(result!)
+                    print(dict)
+//                    let picutreDic = dict as NSDictionary
+//                    if let emailAddress = picutreDic.object(forKey: "email") {
+//
+//                    }
+//
+//                    else {
+//                        print("could not sign in w fb account")
+//                    }
+                    
+                   
+                }
+                self.navToTab()
+                print(error?.localizedDescription as Any)
+            })
+        }
+    }
+    
+    @IBAction func facebookSignIn(_ sender: UIButton) {
+        fbLogin()
+        //does not create fb user yet
     }
     
     
