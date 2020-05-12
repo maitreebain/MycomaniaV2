@@ -27,6 +27,8 @@ class MapViewController: UIViewController {
     private var annotations = [MKPointAnnotation]()
     private var selectedAnnotation: MKPointAnnotation?
     
+    private var shrooms = [Shroom]()
+    
     private lazy var longPressGesture: UILongPressGestureRecognizer = {
         let gesture = UILongPressGestureRecognizer()
         gesture.addTarget(self, action: #selector(handleLongPress(_:)))
@@ -40,9 +42,6 @@ class MapViewController: UIViewController {
         navigationItem.title = "Search"
         longPressGesture.minimumPressDuration = 0.5
         loadMapView()
-//        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-//        let region = MKCoordinateRegion(center: mapView.mapView.userLocation.coordinate, span: span)
-//        mapView.mapView.setRegion(region, animated: true)
     }
     
     private func loadMapView() {
@@ -52,22 +51,34 @@ class MapViewController: UIViewController {
         mapView.addSubview(userTrackingButton)
         userTrackingButton.mapView = mapView.mapView
         mapView.addGestureRecognizer(longPressGesture)
-        
+        annotations = makeAnnotations()
+    }
+    
+    func makeAnnotations() -> [MKPointAnnotation] {
+      var annotations = [MKPointAnnotation]()
+      for shroom in shrooms {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = shroom.coordinate
+        annotation.title = shroom.title
+        annotations.append(annotation)
+      }
+        isShowingNewAnnotations = true
+        self.annotations = annotations
+        return annotations
     }
     
     @objc private func handleLongPress(_ sender: UILongPressGestureRecognizer){
         let map = mapView.mapView
         let location = sender.location(in: map)
         let coordinate = map.convert(location, toCoordinateFrom: map)
-        
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         //maybe have a view pop up to where user can edit title?
         annotation.title = "user input title"
         annotation.subtitle = "subtitle"
+        let mushroom = Shroom(coordinate: annotation.coordinate, title: "", subtitle: "", image: UIImage(), descript: "nop")
+        shrooms.append(mushroom)
         map.addAnnotation(annotation)
-        annotations.append(annotation)
-        isShowingNewAnnotations = true
     }
     
 }
